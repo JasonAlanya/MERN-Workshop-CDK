@@ -59,7 +59,7 @@ export class CdkStack extends cdk.Stack {
 
     //Creating CORS interaction
     const corsOptions: apigateway.CorsOptions = {
-      allowOrigins: apigateway.Cors.ALL_ORIGINS,
+      allowOrigins: ["*"],
       allowMethods: ["GET", "POST", "PATCH", "DELETE"],
       allowHeaders: [
         "Content-Type",

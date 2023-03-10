@@ -93,7 +93,7 @@ async function updateProducts(productId: string, productBody: any) {
 async function deleteProduct(productId: string) {
   const params = {
     TableName: PRODUCT_TABLE_NAME,
-    Key: { pk: `shopid#10`, sk: `categoryid#${productId}` },
+    Key: { pk: `shopid#10`, sk: `productid#${productId}` },
   };
   return dynamodb.delete(params).promise();
 }

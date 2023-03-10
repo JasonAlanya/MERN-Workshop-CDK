@@ -57,8 +57,12 @@ async function updateCategories(categoryId: string, categoryBody: any) {
 async function deleteCategory(categoryId: string) {
   const params = {
     TableName: CATEGORY_TABLE_NAME,
-    Key: { pk: `shopid#10`, sk: `categoryid#${categoryId}` },
+    Key: {
+      pk: "shopid#10",
+      sk: `categoryid#${categoryId}`,
+    },
   };
+
   return dynamodb.delete(params).promise();
 }
 
